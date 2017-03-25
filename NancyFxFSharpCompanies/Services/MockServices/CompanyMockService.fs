@@ -1,12 +1,15 @@
 ﻿namespace NancyFxFSharpCompanies
 
 open System
+open System.Linq
+open System.Collections.Generic
 open System.Threading.Tasks
 
 
 type CompanyMockService() = 
     let delay = 1500
-    let companies = [ for i in 0..9 do yield new Company(i, "Company"+i.ToString()) ]
+    let companiesList = [ for i in 0..9 do yield new Company(i, "Company"+i.ToString()) ]
+    let companies: ICollection<Company> = new List<Company>(companiesList) :> ICollection<Company>
 
     let wait(x) = 
         async {
@@ -15,5 +18,8 @@ type CompanyMockService() =
         } |> Async.StartAsTask
 
     interface ICompanyService with
-        member this.GetCompanies(): Task<list<Company>> = wait companies
-        member this.GetCompany(id): Task<Company> = Task.FromResult(new Company(0, "adsf"))
+        member this.GetCompanies(): Task<ICollection<Company>> = wait companies
+        member this.GetCompany(id: int): Task<Company> = 
+            let pred: Company -> bool = fun x -> x.Id = id
+            let result = companies.Where(pred).FirstOrDefault();
+            wait result
