@@ -1,8 +1,11 @@
 ﻿<Properties StartupItem="NancyFxFSharpCompanies/NancyFxFSharpCompanies.fsproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="firefox" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="NancyFxFSharpCompanies/Bootstrapper.fs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="chromium-browser" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="NancyFxFSharpCompanies/Modules/CompanyModule.fs">
     <Files>
-      <File FileName="NancyFxFSharpCompanies/Bootstrapper.fs" Line="1" Column="1" />
+      <File FileName="NancyFxFSharpCompanies/Modules/IndexModule.fs" Line="3" Column="12" />
+      <File FileName="NancyFxFSharpCompanies/Modules/CompanyModule.fs" Line="14" Column="114" />
+      <File FileName="NancyFxFSharpCompanies/Services/MockServices/CompanyMockService.fs" Line="9" Column="86" />
+      <File FileName="NancyFxFSharpCompanies/Services/ICompanyService.fs" Line="10" Column="52" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

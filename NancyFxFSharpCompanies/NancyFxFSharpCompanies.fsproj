@@ -8,7 +8,7 @@
     <ProjectGuid>{29D40989-232E-4DA2-B41F-D9EA1FEEDBF6}</ProjectGuid>
     <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349C5851-65DF-11DA-9384-00065B846F21};{F2A71F9B-5D33-465A-A702-920D77279786}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>FsMvc4MonoSample</RootNamespace>
+    <RootNamespace>NancyFxFSharpCompanies</RootNamespace>
     <AssemblyName>NancyFxFSharpCompanies</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
@@ -56,6 +56,11 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Bootstrapper.fs" />
+    <Compile Include="Models\Company.fs" />
+    <Compile Include="Services\ICompanyService.fs" />
+    <Compile Include="Services\MockServices\CompanyMockService.fs" />
+    <Compile Include="Modules\IndexModule.fs" />
+    <Compile Include="Modules\CompanyModule.fs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -70,4 +75,8 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <Folder Include="Modules\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
 </Project>

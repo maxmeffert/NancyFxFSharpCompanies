@@ -1,14 +1,18 @@
-﻿
+﻿namespace NancyFxFSharpCompanies
 
-namespace FsMvc4MonoSample
 open System
 open Nancy
+open Nancy.Bootstrapper
+open Nancy.Responses.Negotiation
 
 type Bootstrapper() = 
     inherit DefaultNancyBootstrapper()
 
-type MyModule() as x =
-    inherit NancyModule()
+    override x.InternalConfiguration = 
+        NancyInternalConfiguration.WithOverrides (
+            fun cfg -> 
+                cfg.ResponseProcessors.Clear(); 
+                cfg.ResponseProcessors.Add(typeof<JsonProcessor>) 
+            )
 
-    do
-        x.Get.["/"] <- fun _ -> box "hello world"
+
