@@ -2,27 +2,13 @@
 
 open System
 open System.Collections.Generic
+open System.Threading
 open System.Threading.Tasks
-open System.Threading;
 open Nancy
-
-// https://dusted.codes/asynchronous-fsharp-workflows-in-nancyfx
-
-
+open NancyFSharp
 
 type CompanyModule(companyService : ICompanyService) as self =
     inherit NancyModule("companies")
-
-    let (?) (p : obj) prop = 
-        let ddv = (p :?> DynamicDictionary).[prop] :?> DynamicDictionaryValue
-        match ddv.HasValue with
-        | false -> None
-        | _ -> ddv.TryParse<'a>() |> Some
-
-    let nancyAsyncTask(f : DynamicDictionary -> CancellationToken -> Task<'T>): obj -> CancellationToken -> Task<obj> = 
-        fun ctx ct -> 
-            let t: Task<'T> = f (ctx :?> DynamicDictionary) ct
-            Task.FromResult(t.Result :> obj)
     
 
     do

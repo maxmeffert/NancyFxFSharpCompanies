@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -18,8 +18,7 @@
     <OutputPath>bin</OutputPath>
     <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <PlatformTarget>
-    </PlatformTarget>
+    <PlatformTarget></PlatformTarget>
     <ConsolePause>False</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -28,8 +27,7 @@
     <Optimize>true</Optimize>
     <OutputPath>bin</OutputPath>
     <ErrorReport>prompt</ErrorReport>
-    <PlatformTarget>
-    </PlatformTarget>
+    <PlatformTarget></PlatformTarget>
     <ConsolePause>False</ConsolePause>
     <Tailcalls>true</Tailcalls>
   </PropertyGroup>
@@ -55,12 +53,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="NancyFSharp.fs" />
     <Compile Include="Bootstrapper.fs" />
+    <Compile Include="Models\Employee.fs" />
+    <Compile Include="Models\Department.fs" />
     <Compile Include="Models\Company.fs" />
+    <Compile Include="Services\IEmployeeService.fs" />
+    <Compile Include="Services\IDepartmentService.fs" />
     <Compile Include="Services\ICompanyService.fs" />
-    <Compile Include="Services\MockServices\CompanyMockService.fs" />
     <Compile Include="Modules\IndexModule.fs" />
     <Compile Include="Modules\CompanyModule.fs" />
+    <Compile Include="Modules\DepartmentModule.fs" />
+    <Compile Include="Modules\EmployeeModule.fs" />
+    <Compile Include="Services\MockServices\EmployeeMockService.fs" />
+    <Compile Include="Services\MockServices\DepartmentMockService.fs" />
+    <Compile Include="Services\MockServices\CompanyMockService.fs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
