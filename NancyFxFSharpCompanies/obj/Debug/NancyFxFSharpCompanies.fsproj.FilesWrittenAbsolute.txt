@@ -1,0 +1,7 @@
+/home/darjeeling/Documents/mono/NancyFxFSharpCompanies/NancyFxFSharpCompanies/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.fs
+/home/darjeeling/Documents/mono/NancyFxFSharpCompanies/NancyFxFSharpCompanies/bin/FsMvc4MonoSample.dll.mdb
+/home/darjeeling/Documents/mono/NancyFxFSharpCompanies/NancyFxFSharpCompanies/bin/FsMvc4MonoSample.dll
+/home/darjeeling/Documents/mono/NancyFxFSharpCompanies/NancyFxFSharpCompanies/obj/Debug/FsMvc4MonoSample.dll
+/home/darjeeling/Documents/mono/NancyFxFSharpCompanies/NancyFxFSharpCompanies/obj/Debug/FsMvc4MonoSample.dll.mdb
+/home/darjeeling/Documents/mono/NancyFxFSharpCompanies/NancyFxFSharpCompanies/bin/Nancy.dll
+/home/darjeeling/Documents/mono/NancyFxFSharpCompanies/NancyFxFSharpCompanies/bin/Nancy.Hosting.Aspnet.dll
